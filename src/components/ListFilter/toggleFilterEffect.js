@@ -20,7 +20,7 @@ const toggleFilterEffect = (listFilterRefs, fold) => {
     fold.value = !fold.value
   }
   onMounted(() => {
-    setHasFold()
+    listFilterRefs.value ? setHasFold() : false
   })
 
   watch(fold, n => {
