@@ -1,0 +1,50 @@
+$baseFamily: 'Microsoft YaHei', 'avenir', 'helvetica', 'arial', 'sans-serif';
+
+$bg-primary: rgba(0, 21, 41, 1);
+
+$color-white-10: rgba(255, 255, 255, 1);
+$color-white-8: rgba(255, 255, 255, 0.8);
+$color-white-5: rgba(255, 255, 255, 0.5);
+$color-white-1: rgba(255, 255, 255, 0.1);
+$color-black-1: rgba(15, 11, 11, 0.1);
+
+$bg-grey-light: #f5f5f5;
+$color-border-light: #f5f5f5;
+$color-border-normal: #d8dce5;
+$color-scrollbar-light: rgba(144, 147, 153, 0.3);
+
+$color-primary: rgba(44, 109, 210, 1);
+$color-primary-5: rgba(44, 109, 210, 0.5);
+$color-primary-3: rgba(44, 109, 210, 0.3);
+$color-primary-1: rgba(44, 109, 210, 0.1);
+
+$color-success: rgba(4, 181, 138, 1);
+$color-warning: rgba(249, 181, 82, 1);
+$color-danger: rgba(255, 108, 85, 1);
+
+$color-text-base: #333;
+$color-text-normal: #2c3e50;
+$color-text-light: #999;
+$color-text-link: $color-primary;
+
+$textSize-large-xxxx: 2.4rem;
+$textSize-large-xxx: 2.2rem;
+$textSize-large-xx: 2rem;
+$textSize-large-x: 1.8rem;
+$textSize-large: 1.6rem;
+$textSize-normal-x: 1.5rem;
+$textSize-normal: 1.4rem;
+$textSize-small-x: 1.3rem;
+$textSize-small: 1.2rem;
+$textSize-mini-x: 1.1rem;
+$textSize-mini: 1rem;
+
+$textWeight-bold: 700;
+$textWeight-normal: 400;
+$textWeight-light: 200;
+
+$radius-base: 0.2rem;
+$radius-large: 0.4rem;
+
+$default-animation: ease all 0.2s;
+$shadow-normal: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.1);

@@ -1,0 +1,15 @@
+// element-plus drawer scss reset
+.el-drawer {
+  &__header {
+    padding: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: solid 0.1rem $color-border-normal;
+    .title {
+      margin: 0;
+    }
+  }
+  &__footer {
+    padding-top: 2rem;
+    border-top: solid 0.1rem $color-border-normal;
+  }
+}

@@ -1,0 +1,11 @@
+# 忽略打包的文件
+src/unpackage
+# 忽略uni-app官方的组件库错误和警告
+src/components/uni-**
+# 忽略uni-app官方插件组件
+src/uni_modules
+# 忽略插件市场的ly-tree组件
+src/components/ly-tree
+src/components/ly-tree-*
+# 忽略插件市场的PreviewImage组件
+# src/components/kxj-previewImage

@@ -1,0 +1,43 @@
+@mixin keyframes($a) {
+  @-webkit-keyframes #{$a} {
+    @content;
+  }
+  @-moz-keyframes #{$a} {
+    @content;
+  }
+  @keyframes #{$a} {
+    @content;
+  }
+}
+
+@mixin border-1px($color) {
+  position: relative;
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    border-top: 1px solid $color;
+    content: ' ';
+  }
+}
+
+@mixin ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin border-none() {
+  &::after {
+    display: none;
+  }
+}
+
+@mixin bg-image($url, $format) {
+  background-image: url($url + '.' + $format);
+  @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+    background-image: url($url + '@2x.' + $format);
+  }
+}

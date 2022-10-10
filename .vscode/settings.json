@@ -1,0 +1,7 @@
+{
+  "easysass.targetDir": "", //路径
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  }
+}

@@ -1,0 +1,33 @@
+// 公共样式
+@import './variable';
+* {
+  box-sizing: border-box;
+  // touch-action: pan-y;
+}
+html,
+body,
+#app {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-size: 10px;
+  font-family: $baseFamily;
+  color: $color-text-normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+code {
+  display: inline-block;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.4rem;
+  color: $color-white-10;
+  background: $color-text-normal;
+}
+:focus {
+  outline: none;
+}
+
+*:hover {
+  transition: $default-animation;
+}
