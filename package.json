@@ -1,5 +1,5 @@
 {
-  "name": "web-dxe-agent",
+  "name": "web-common-modules",
   "version": "0.1.0",
   "private": true,
   "scripts": {
