@@ -27,9 +27,9 @@
 
 <script>
 import Logo from '@/components/Logo'
-import SideMenu from '@/components/SideMenu/SideMenu.vue'
-import Header_LR from '@/components/Header/Header_LR'
-import TagsView from '@/components/TagsView/TagsView.vue'
+import SideMenu from '../SideMenu/SideMenu.vue'
+import Header_LR from '../Header/Header_LR'
+import TagsView from '../TagsView/TagsView.vue'
 import { globalStore } from '@/stores/global'
 
 export default {

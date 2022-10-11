@@ -33,9 +33,9 @@
 </template>
 
 <script>
-import SideMenu from '@/components/SideMenu/SideMenu.vue'
-import Header_TB from '@/components/Header/Header_TB'
-import TagsView from '@/components/TagsView/TagsView.vue'
+import SideMenu from '../SideMenu/SideMenu.vue'
+import Header_TB from '../Header/Header_TB'
+import TagsView from '../TagsView/TagsView.vue'
 import { globalStore } from '@/stores/global'
 
 export default {
@@ -67,11 +67,11 @@ export default {
     transition: ease-in-out width 0.2s;
 
     .collapse {
-      box-sizing: content-box;
-      cursor: pointer;
       display: block;
+      box-sizing: content-box;
       height: 2rem;
       padding: 1rem 2.2rem;
+      cursor: pointer;
     }
     .side-menu {
       flex: 1;
