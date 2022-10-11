@@ -34,7 +34,7 @@
 
 <script>
 import SideMenu from '../SideMenu/SideMenu.vue'
-import Header_TB from '../Header/Header_TB'
+import Header_TB from '@/components/Header/Header_TB'
 import TagsView from '../TagsView/TagsView.vue'
 import { globalStore } from '@/stores/global'
 
