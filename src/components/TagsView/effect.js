@@ -6,7 +6,7 @@
 import path from 'path'
 import { storeToRefs } from 'pinia'
 import { ref, onMounted, watch } from 'vue'
-import { tagsViewStore } from '@/stores/tagsView'
+import { tagsViewStore } from '../../stores/tagsView'
 import { authStore } from '@/stores/auth'
 import { useRoute, useRouter } from 'vue-router'
 
