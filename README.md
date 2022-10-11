@@ -12,6 +12,9 @@ npm install
 npm install --registry=https://registry.npm.taobao.org
 ```
 
+## 使用文档
+https://gfn0s2.yuque.com/books/share/a6f7f79a-8c79-4bce-b7bc-b68f624ba02e
+
 ### Compiles and hot-reloads for development
 ```
 npm run serve

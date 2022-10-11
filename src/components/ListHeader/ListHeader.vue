@@ -3,7 +3,7 @@
     <h1>{{ title || $route?.meta?.title || $route.name }}</h1>
     <div class="btn-group">
       <slot>
-        <el-button v-if="hasBtn" type="primary" icon="CirclePlus">新建</el-button>
+        <el-button v-if="hasBtn" type="primary" icon="CirclePlus" @click="btnClick">{{ btnText }}</el-button>
       </slot>
     </div>
   </div>
@@ -13,6 +13,7 @@
 <script>
 export default {
   name: 'ListHeader',
+  emits: ['btnClick'],
   props: {
     title: {
       type: String,
@@ -22,9 +23,22 @@ export default {
       type: Boolean,
       default: true
     },
+    btnText: {
+      type: String,
+      default: '新建'
+    },
     hasBtn: {
       type: Boolean,
       default: true
+    }
+  },
+  setup(props, { emit }) {
+    const btnClick = () => {
+      emit('btnClick')
+    }
+
+    return {
+      btnClick
     }
   }
 }
