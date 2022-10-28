@@ -21,9 +21,14 @@ const toggleFilterEffect = (listFilterRefs, fold) => {
   }
   onMounted(() => {
     listFilterRefs.value ? setHasFold() : false
+    setHeight(fold.value)
   })
 
   watch(fold, n => {
+    setHeight(n)
+  })
+
+  const setHeight = n => {
     if (n) {
       foldCurrentHeight.value = 'auto'
       foldText.value = '收起条件 '
@@ -31,7 +36,7 @@ const toggleFilterEffect = (listFilterRefs, fold) => {
       foldCurrentHeight.value = foldMinHeight.value
       foldText.value = '查看更多条件 '
     }
-  })
+  }
 
   return { hasFold, foldText, foldCurrentHeight, toggleFilters }
 }
