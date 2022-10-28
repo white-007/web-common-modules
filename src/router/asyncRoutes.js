@@ -8,6 +8,7 @@ const Layout = () => import('@/components/Layout')
  * @param {Boolean} meta.hidden         菜单是否显示/隐藏，因为菜单是直接使用路由进行渲染，一些页面如：登录、404不用显示在菜单里，所以可以使用该属性隐藏这些页面
  * @param {String}  meta.title          菜单名称，在页面显示的名字
  * @param {String}  meta.icon           菜单前面的图标，目前支持ant-design-vue和iconfont两种图标，填入图标名字可自动生成
+ * @param {String}  meta.iconSize       菜单前面的图标大小
  * @param {String}  meta.link           用于设置外链地址，如：link: https://www.baidu.com，设置了link后path属性不生效
  * @param {Boolean} meta.keepAlive      是否缓存页面组件
  * @param {Boolean} meta.auth           是否需要登录授权
@@ -16,17 +17,17 @@ const Layout = () => import('@/components/Layout')
  */
 export const asyncRoutes = [
   {
-    name: 'Home',
-    path: '/home',
+    name: 'Demo',
+    path: '/demo',
     component: Layout,
     children: [
       {
-        name: 'HomeIndex',
+        name: 'DemoIndex',
         path: 'index',
-        component: () => import(/* webpackChunkName: "home" */ '@/views/home'),
+        component: () => import(/* webpackChunkName: "demo" */ '@/views/demo'),
         meta: {
-          title: '首页',
-          icon: 'House',
+          title: '演示Demo',
+          icon: 'iconfont icon-config',
           affix: true
         }
       }
@@ -37,7 +38,7 @@ export const asyncRoutes = [
     path: '/manage-center',
     component: Layout,
     meta: {
-      title: '管理中心',
+      title: '二级菜单',
       icon: 'OfficeBuilding'
     },
     children: [
@@ -55,33 +56,6 @@ export const asyncRoutes = [
         component: () => import(/* webpackChunkName: "person-manage" */ '@/views/person-manage'),
         meta: {
           title: '人员管理'
-        }
-      }
-    ]
-  },
-  {
-    name: 'DataCenter',
-    path: '/data-center',
-    component: Layout,
-    meta: {
-      title: '数据中心',
-      icon: 'DataLine'
-    },
-    children: [
-      {
-        name: 'bdReport',
-        path: 'bd-report',
-        component: () => import(/* webpackChunkName: "bd-report" */ '@/views/bd-report'),
-        meta: {
-          title: '业务员报表'
-        }
-      },
-      {
-        name: 'OrderList',
-        path: 'order-list',
-        component: () => import(/* webpackChunkName: "order-list" */ '@/views/order-list'),
-        meta: {
-          title: '订单列表'
         }
       }
     ]

@@ -5,7 +5,7 @@
  *
  * @param {Boolean} meta.hidden         菜单是否显示/隐藏，因为菜单是直接使用路由进行渲染，一些页面如：登录、404不用显示在菜单里，所以可以使用该属性隐藏这些页面
  * @param {String}  meta.title          菜单名称，在页面显示的名字
- * @param {String}  meta.icon           菜单前面的图标，目前支持ant-design-vue和iconfont两种图标，填入图标名字可自动生成
+ * @param {String}  meta.icon           菜单前面的图标，目前支持el自带图标和iconfont两种图标，填入图标名字可自动生成，iconfont name示例："iconfont icon-xxx"
  * @param {String}  meta.link           用于设置外链地址，如：link: https://www.baidu.com，设置了link后path属性不生效
  * @param {Boolean} meta.keepAlive      是否缓存页面组件
  * @param {Boolean} meta.auth           是否需要登录授权
@@ -16,7 +16,7 @@ export const constantRoutes = [
   {
     name: 'Root',
     path: '/',
-    redirect: '/home/index',
+    redirect: '/demo/index',
     meta: {
       hidden: true // true: 不显示在菜单
     }

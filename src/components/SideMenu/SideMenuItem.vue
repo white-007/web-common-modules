@@ -6,20 +6,23 @@
       <!-- 外链 -->
       <el-menu-item v-if="onlyOneChild?.meta?.link">
         <a class="link" :href="onlyOneChild?.meta?.link" target="_blank">
-          <el-icon :size="16"><component :is="onlyOneChild?.meta?.icon" /></el-icon>
+          <!-- <el-icon :size="16"><component :is="onlyOneChild?.meta?.icon" /></el-icon> -->
+          <MIcon :size="onlyOneChild?.meta?.iconSize || 16" :name="onlyOneChild?.meta?.icon" />
           {{ onlyOneChild?.meta?.title || onlyOneChild.name }}
         </a>
       </el-menu-item>
       <!-- 路由 -->
       <el-menu-item v-else :index="resolvePath(onlyOneChild.path)">
-        <el-icon :size="16"><component :is="onlyOneChild?.meta?.icon" /></el-icon>
+        <!-- <el-icon :size="16"><component :is="onlyOneChild?.meta?.icon" /></el-icon> -->
+        <MIcon :size="onlyOneChild?.meta?.iconSize || 16" :name="onlyOneChild?.meta?.icon" />
         <template #title>{{ onlyOneChild?.meta?.title || onlyOneChild.name }}</template>
       </el-menu-item>
     </template>
 
     <el-sub-menu v-else :index="item.name">
       <template #title>
-        <el-icon :size="16"><component :is="item?.meta?.icon" /></el-icon>
+        <!-- <el-icon :size="16"><component :is="item?.meta?.icon" /></el-icon> -->
+        <MIcon :size="item?.meta?.iconSize || 16" :name="item?.meta?.icon" />
         <span>{{ item?.meta?.title || item.name }}</span>
       </template>
       <SideMenuItem
@@ -35,9 +38,11 @@
 <script>
 import path from 'path'
 import { ref } from 'vue'
+import MIcon from './MIcon'
 
 export default {
   name: 'SideMenuItem',
+  components: { MIcon },
   props: {
     item: {
       type: Object,
