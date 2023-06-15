@@ -12,6 +12,25 @@ npm install
 npm install --registry=https://registry.npm.taobao.org
 ```
 
+### 首次拉取子模块 submodules
+```
+git submodule update --init --recursive
+```
+
+### 更新子模块 (适用于git 1.8.2及以上版本)
+```
+git submodule update --recursive --remote
+```
+
+### 更新子模块(适用于git 1.7.3及以上版本)
+```
+git submodule update --recursive
+```
+或者
+```
+git pull --recurse-submodules
+```
+
 ## 使用文档
 https://gfn0s2.yuque.com/books/share/a6f7f79a-8c79-4bce-b7bc-b68f624ba02e
 
