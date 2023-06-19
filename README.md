@@ -1,4 +1,4 @@
-# 便利小二-供应商服务系统
+# 公用模块
 ## Project setup
 ```
 npm install
