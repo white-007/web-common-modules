@@ -26,7 +26,8 @@ const toggleFilterEffect = (listFilterRefs, fold) => {
 
   // 若组件实例是 <KeepAlive> 缓存树的一部分，当组件被插入到 DOM 中时调用
   onActivated(() => {
-    setHasFold()
+    listFilterRefs.value ? setHasFold() : false
+    setHeight(fold.value)
   })
 
   // 若组件实例是 <KeepAlive> 缓存树的一部分，当组件从 DOM 中被移除时调用
