@@ -1,4 +1,4 @@
-import { ref, onMounted, watch } from 'vue'
+import { ref, onMounted, onActivated, watch } from 'vue'
 
 const hasFold = ref(false) // 是否折叠
 const foldText = ref('查看更多条件')
@@ -23,6 +23,16 @@ const toggleFilterEffect = (listFilterRefs, fold) => {
     listFilterRefs.value ? setHasFold() : false
     setHeight(fold.value)
   })
+
+  // 若组件实例是 <KeepAlive> 缓存树的一部分，当组件被插入到 DOM 中时调用
+  onActivated(() => {
+    setHasFold()
+  })
+
+  // 若组件实例是 <KeepAlive> 缓存树的一部分，当组件从 DOM 中被移除时调用
+  // onDeactivated(() => {
+  //   console.log('deactivated')
+  // })
 
   watch(fold, n => {
     setHeight(n)
