@@ -4,7 +4,7 @@
       <div class="filter-wrapper" ref="listFilterRefs" :style="{ height: foldCurrentHeight }">
         <ListFilterItem v-for="item in options" :key="item.code" :item="item" :size="size" ref="listFilterItemRefs" />
       </div>
-      <a v-if="hasFold" class="show-more" @click="toggleFilters">
+      <a v-show="hasFold" class="show-more" @click="toggleFilters">
         <span class="text">{{ foldText }}</span>
         <el-icon :size="12" v-if="fold"><ArrowUp /></el-icon>
         <el-icon :size="12" v-else><ArrowDown /></el-icon>
